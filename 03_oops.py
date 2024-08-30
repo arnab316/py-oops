@@ -1,7 +1,8 @@
 def greet(fx):
-    def mfx():
+    #  *arg . **kwargs is for arguments functions
+    def mfx(*args , **kwargs):
         print("Good Moarning")
-        fx()
+        fx(*args , **kwargs)
         print("Thanks for using this function")
     return mfx
 
@@ -10,4 +11,12 @@ def greet(fx):
 def hello():
     print("hello")
 
-hello()
+# hello()
+
+@greet
+def add(a, b):
+  print(a + b)
+
+
+
+add(2, 1)
